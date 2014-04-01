@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6DDC012918EAF07700A74466 /* StatusBarGlyphCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC012518EAF07700A74466 /* StatusBarGlyphCheckmark.png */; };
-		6DDC012A18EAF07700A74466 /* StatusBarGlyphCheckmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC012618EAF07700A74466 /* StatusBarGlyphCheckmark@2x.png */; };
-		6DDC012B18EAF07800A74466 /* StatusBarGlyphCross.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC012718EAF07700A74466 /* StatusBarGlyphCross.png */; };
-		6DDC012C18EAF07800A74466 /* StatusBarGlyphCross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC012818EAF07700A74466 /* StatusBarGlyphCross@2x.png */; };
 		D228A0CA182DA75A006B7ABB /* SBSelectPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D228A0C9182DA75A006B7ABB /* SBSelectPropertyViewController.m */; };
 		D25B0FA5184F343700B8174B /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D25B0FA4184F343600B8174B /* JDStatusBarView.m */; };
 		D25B0FA8184F364100B8174B /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D25B0FA7184F364100B8174B /* JDStatusBarStyle.m */; };
@@ -31,10 +27,6 @@
 /* Begin PBXFileReference section */
 		25F89E831D0E4D728185F5B4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FFC4A835EA4347BBD86048 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		6DDC012518EAF07700A74466 /* StatusBarGlyphCheckmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusBarGlyphCheckmark.png; sourceTree = "<group>"; };
-		6DDC012618EAF07700A74466 /* StatusBarGlyphCheckmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarGlyphCheckmark@2x.png"; sourceTree = "<group>"; };
-		6DDC012718EAF07700A74466 /* StatusBarGlyphCross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusBarGlyphCross.png; sourceTree = "<group>"; };
-		6DDC012818EAF07700A74466 /* StatusBarGlyphCross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatusBarGlyphCross@2x.png"; sourceTree = "<group>"; };
 		D228A0C8182DA75A006B7ABB /* SBSelectPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSelectPropertyViewController.h; sourceTree = "<group>"; };
 		D228A0C9182DA75A006B7ABB /* SBSelectPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSelectPropertyViewController.m; sourceTree = "<group>"; };
 		D25B0FA3184F343600B8174B /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
@@ -80,10 +72,6 @@
 		D264F8841820213200DA0E53 = {
 			isa = PBXGroup;
 			children = (
-				6DDC012518EAF07700A74466 /* StatusBarGlyphCheckmark.png */,
-				6DDC012618EAF07700A74466 /* StatusBarGlyphCheckmark@2x.png */,
-				6DDC012718EAF07700A74466 /* StatusBarGlyphCross.png */,
-				6DDC012818EAF07700A74466 /* StatusBarGlyphCross@2x.png */,
 				D264F8BF1820216300DA0E53 /* JDStatusBarNotification */,
 				D264F8961820213200DA0E53 /* JDStatusBarNotificationExample */,
 				D264F88F1820213200DA0E53 /* Frameworks */,
@@ -208,11 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DDC012B18EAF07800A74466 /* StatusBarGlyphCross.png in Resources */,
-				6DDC012918EAF07700A74466 /* StatusBarGlyphCheckmark.png in Resources */,
-				6DDC012A18EAF07700A74466 /* StatusBarGlyphCheckmark@2x.png in Resources */,
 				D294B57C182D03E90042B5B4 /* SBCustomStyleViewController.xib in Resources */,
-				6DDC012C18EAF07800A74466 /* StatusBarGlyphCross@2x.png in Resources */,
 				D264F8A31820213200DA0E53 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

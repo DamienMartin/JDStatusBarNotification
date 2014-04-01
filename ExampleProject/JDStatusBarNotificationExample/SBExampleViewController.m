@@ -87,7 +87,7 @@ static NSString *const SBStyle2 = @"SBStyle2";
     
     // presenting a notification, before a keyWindow is set
     self.indicatorStyle = UIActivityIndicatorViewStyleWhite;
-    [JDStatusBarNotification showWithStatus:@"Hello World!" icon:[UIImage imageNamed:@"StatusBarGlyphCheckmark"] dismissAfter:2.0
+    [JDStatusBarNotification showWithStatus:@"Hello World!" dismissAfter:2.0
                                   styleName:JDStatusBarStyleMatrix];
 }
 
