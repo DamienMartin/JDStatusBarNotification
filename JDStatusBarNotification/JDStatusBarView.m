@@ -72,7 +72,7 @@
 	CGSize textSize = [self currentTextSize];
 	
 	// icon
-	self.iconView.frame = CGRectMake( ((self.bounds.size.width - self.iconView.frame.size.width - textSize.width) / 2.0) - 8.0, (self.bounds.size.height - self.iconView.frame.size.height)/2.0 , self.iconView.frame.size.width, self.iconView.frame.size.height);
+	self.iconView.frame = CGRectMake( ((self.bounds.size.width - textSize.width) / 2.0) - self.iconView.frame.size.width - 4.0, (self.bounds.size.height - self.iconView.frame.size.height)/2.0 , self.iconView.frame.size.width, self.iconView.frame.size.height);
 	
     // activity indicator
     if (_activityIndicatorView ) {
