@@ -85,6 +85,26 @@ typedef JDStatusBarStyle*(^JDPrepareStyleBlock)(JDStatusBarStyle *style);
                       dismissAfter:(NSTimeInterval)timeInterval
                          styleName:(NSString*)styleName;
 
+
+/**
+ *  Same as showWithStatus:styleName:, but the notification
+ *  will automatically dismiss after the given timeInterval.
+ *
+ *  @param status       The message to display
+ *  @param icon			The icon display on the left of message
+ *  @param timeInterval The duration, how long the notification
+ *  is displayed. (Including the animation duration)
+ *  @param styleName The name of the style. You can use any JDStatusBarStyle constant
+ *  (JDStatusBarStyleDefault, etc.), or a custom style identifier, after you added a
+ *  custom style. If this is nil, the default style will be used.
+ *
+ *  @return The presented notification view for further customization
+ */
++ (JDStatusBarView*)showWithStatus:(NSString *)status
+					 icon:(UIImage *)icon
+             dismissAfter:(NSTimeInterval)timeInterval
+                styleName:(NSString*)styleName;
+
 #pragma mark Dismissal
 
 /**

@@ -81,6 +81,19 @@
     return view;
 }
 
++ (UIView*)showWithStatus:(NSString *)status
+					 icon:(UIImage *)icon
+             dismissAfter:(NSTimeInterval)timeInterval
+                styleName:(NSString*)styleName;
+{
+    UIView *view = [[self sharedInstance] showWithStatus:status
+													icon:icon
+                                               styleName:styleName];
+    [self dismissAfter:timeInterval];
+    return view;
+}
+
+
 + (void)dismiss;
 {
     [self dismissAnimated:YES];
@@ -175,6 +188,13 @@
 - (UIView*)showWithStatus:(NSString *)status
                 styleName:(NSString*)styleName;
 {
+	return [self showWithStatus:status icon:nil styleName:styleName];
+}
+
+- (UIView*)showWithStatus:(NSString *)status
+					 icon:(UIImage *)icon
+				styleName:(NSString*)styleName;
+{
     JDStatusBarStyle *style = nil;
     if (styleName != nil) {
         style = self.userStyles[styleName];
@@ -185,6 +205,13 @@
 }
 
 - (UIView*)showWithStatus:(NSString *)status
+                    style:(JDStatusBarStyle*)style;
+{
+	return [self showWithStatus:status icon:nil style:style];
+}
+
+- (UIView*)showWithStatus:(NSString *)status
+					 icon:(UIImage *)icon
                     style:(JDStatusBarStyle*)style;
 {
     // prepare for new style
