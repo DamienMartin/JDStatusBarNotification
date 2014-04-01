@@ -10,6 +10,7 @@
 
 @interface JDStatusBarView ()
 @property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 @end
 
@@ -29,6 +30,15 @@
         [self addSubview:_textLabel];
     }
     return _textLabel;
+}
+
+-(UIImageView *)iconView {
+	if(_iconView == nil) {
+		_iconView = [[UIImageView alloc] init];
+		_iconView.backgroundColor = [UIColor clearColor];
+		[self addSubview:_iconView];
+	}
+	return _iconView;
 }
 
 - (UIActivityIndicatorView *)activityIndicatorView;
@@ -59,11 +69,15 @@
     self.textLabel.frame = CGRectMake(0, 1+self.textVerticalPositionAdjustment,
                                       self.bounds.size.width, self.bounds.size.height-1);
     
+	CGSize textSize = [self currentTextSize];
+	
+	// icon
+	self.iconView.frame = CGRectMake( ((self.bounds.size.width - self.iconView.frame.size.width - textSize.width) / 2.0) - 8.0, (self.bounds.size.height - self.iconView.frame.size.height)/2.0 , self.iconView.frame.size.width, self.iconView.frame.size.height);
+	
     // activity indicator
     if (_activityIndicatorView ) {
-        CGSize textSize = [self currentTextSize];
         CGRect indicatorFrame = _activityIndicatorView.frame;
-        indicatorFrame.origin.x = round((self.bounds.size.width - textSize.width)/2.0) - indicatorFrame.size.width - 8.0;
+        indicatorFrame.origin.x = round((self.bounds.size.width - textSize.width - _iconView.frame.size.width)/2.0) - indicatorFrame.size.width - 8.0;
         indicatorFrame.origin.y = ceil(1+(self.bounds.size.height - indicatorFrame.size.height)/2.0);
         _activityIndicatorView.frame = indicatorFrame;
     }

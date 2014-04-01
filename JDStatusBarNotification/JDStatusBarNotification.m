@@ -201,7 +201,7 @@
     }
     
     if (style == nil) style = self.defaultStyle;
-    return [self showWithStatus:status style:style];
+    return [self showWithStatus:status icon:icon style:style];
 }
 
 - (UIView*)showWithStatus:(NSString *)status
@@ -250,6 +250,10 @@
         textLabel.shadowOffset = CGSizeZero;
     }
     
+	// icon
+	[self.topBar.iconView setImage:icon];
+	[self.topBar.iconView sizeToFit];
+	
     // reset progress & activity
     self.progress = 0.0;
     [self showActivityIndicator:NO indicatorStyle:0];
@@ -264,7 +268,7 @@
             self.topBar.transform = CGAffineTransformIdentity;
         }];
     }
-    
+	
     return self.topBar;
 }
 
