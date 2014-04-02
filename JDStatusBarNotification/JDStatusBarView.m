@@ -65,19 +65,21 @@
 {
     [super layoutSubviews];
     
-    // label
-    self.textLabel.frame = CGRectMake(0, 1+self.textVerticalPositionAdjustment,
-                                      self.bounds.size.width, self.bounds.size.height-1);
-    
 	CGSize textSize = [self currentTextSize];
 	
+	CGFloat statusWidth = self.bounds.size.width;
+	CGFloat startX = (statusWidth - (textSize.width + 4 + self.iconView.frame.size.width))/2.0;
+	// label
+    self.textLabel.frame = CGRectMake(startX + 4 + self.iconView.frame.size.width, 1 + self.textVerticalPositionAdjustment,
+                                      textSize.width, self.bounds.size.height-1);
+	
 	// icon
-	self.iconView.frame = CGRectMake( ((self.bounds.size.width - textSize.width) / 2.0) - self.iconView.frame.size.width - 4.0, (self.bounds.size.height - self.iconView.frame.size.height)/2.0 , self.iconView.frame.size.width, self.iconView.frame.size.height);
+	self.iconView.frame = CGRectMake(startX , (self.bounds.size.height - self.iconView.frame.size.height)/2.0 , self.iconView.frame.size.width, self.iconView.frame.size.height);
 	
     // activity indicator
     if (_activityIndicatorView ) {
         CGRect indicatorFrame = _activityIndicatorView.frame;
-        indicatorFrame.origin.x = round((self.bounds.size.width - textSize.width - _iconView.frame.size.width)/2.0) - indicatorFrame.size.width - 8.0;
+        indicatorFrame.origin.x = _iconView.frame.origin.x - indicatorFrame.size.width - 8.0;
         indicatorFrame.origin.y = ceil(1+(self.bounds.size.height - indicatorFrame.size.height)/2.0);
         _activityIndicatorView.frame = indicatorFrame;
     }
